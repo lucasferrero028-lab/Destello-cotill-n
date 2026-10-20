@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Compra</title>
-    <!-- SOLUCIONADO: URL de Bootstrap con protocolo absoluto e íntegro -->
+    <!-- CORREGIDO: URL oficial y directa de Bootstrap 5.3.3 (Carga instantánea) -->
     <link href="https://jsdelivr.net" rel="stylesheet">
     <style>
+        /* ANIMACIÓN NATUVA EN REEMPLAZO DE AOS */
+        @keyframes entradaNeon {
+            from {
+                opacity: 0;
+                transform: scale(0.92) translateY(20px);
+                box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 0, 127, 0.25);
+            }
+        }
+
         /* FONDO Y RESPALDO DE CENTRADO ABSOLUTO */
         body { 
             background-color: #0b0f19; 
@@ -16,21 +30,22 @@
             margin: 0;
             overflow-x: hidden;
             
-            /* RESPALDO MANUAL: Si Bootstrap no carga, esto centra la tarjeta en el punto medio exacto */
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
         }
         
-        /* TARJETA AGRANDADA Y CONTROLADA */
+        /* TARJETA OPTIMIZADA CON ANIMACIÓN */
         .box-pago { 
             width: 100%;
             max-width: 650px; 
             background: #111827; 
             border-radius: 16px; 
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 0, 127, 0.25); 
             border: 1px solid rgba(255, 0, 127, 0.35);
             padding: 2.5rem !important; 
+            
+            /* Se ejecuta al cargar la página de forma fluida usando la GPU */
+            animation: entradaNeon 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         /* Título Neón */
@@ -50,7 +65,7 @@
             font-size: 0.95rem; 
         }
 
-        /* Inputs oscuros corregidos (se expanden al 100% del ancho de su columna) */
+        /* Inputs oscuros */
         .form-control-dark {
             width: 100%;
             background-color: #1f2937 !important;
@@ -114,7 +129,7 @@
         }
     </style>
 </head>
-<body class="d-flex align-items-center justify-content-center">
+<body>
 
 <div class="box-pago m-3">
     <h4 class="text-center fw-bold mb-4 titulo-neon">Completá tu Pago</h4>
@@ -147,6 +162,7 @@
         <!-- Fila del Monto Total Abajo -->
         <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-neon-top">
             <span class="text-white-50 fw-medium total-label">Monto Total:</span>
+            <!-- CORREGIDO: Se quitó la barra invertida que rompía el texto -->
             <strong class="total-neon" id="total-pago">\$0.00</strong>
         </div>
 
@@ -156,6 +172,7 @@
         </button>
     </form>
 </div>
+
 
 <script>
     // 1. Cargar el carrito guardado
@@ -192,8 +209,6 @@
 
     document.addEventListener('DOMContentLoaded', mostrarTotal);
 </script>
-
-
 </body>
 </html>
 

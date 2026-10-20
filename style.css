@@ -659,3 +659,78 @@ footer {
   }
 }
 
+
+/* 1. ESTILOS PARA CELULAR (Por defecto) */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna en el celular */
+  gap: 20px;                  /* Espacio de separación entre productos */
+  padding: 15px;
+  justify-items: center;      /* Centra las tarjetas */
+}
+
+/* Esta es la tarjeta individual (el cuadro blanco con la foto y el botón) */
+.tarjeta-producto {
+  width: 100%;
+  max-width: 320px;          /* Evita que la tarjeta se estire y se vea gigante */
+  box-sizing: border-box;
+}
+
+
+/* 2. ESTILOS PARA COMPUTADORA (Pantallas grandes) */
+@media (min-width: 768px) {
+  .contenedor-productos {
+    /* En PC se crean automáticamente las columnas que quepan (mínimo 250px cada una) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    justify-content: center;
+    max-width: 1200px;        /* Limita el ancho total en pantallas gigantes */
+    margin: 0 auto;           /* Centra todo el bloque en la pantalla de la PC */
+  }
+}
+/* REPARACIÓN PARA CELULARES (Pantallas menores a 576px) */
+@media (max-width: 575px) {
+  
+  /* Fuerza a que el contenedor .row de Bootstrap arme 2 columnas en lugar de 1 */
+  #productos .row, 
+  #disfraces .row, 
+  #halloween .row, 
+  #combos .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-right: -5px !important;
+    margin-left: -5px !important;
+  }
+
+  /* Fuerza a cada tarjeta (columna) a ocupar exactamente la mitad del ancho (2 columnas) */
+  #productos .row > [class*="col-"],
+  #disfraces .row > [class*="col-"],
+  #halloween .row > [class*="col-"],
+  #combos .row > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Ajustes visuales para que las tarjetas de cotillón no queden gigantes ni deformes */
+  .card {
+    height: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Reducimos sutilmente los textos internos para las 2 columnas */
+  .card .card-title, 
+  .card h5 {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .card .btn, 
+  .card .price, 
+  .card p {
+    font-size: 0.75rem !important;
+    padding: 4px 6px !important;
+  }
+}
