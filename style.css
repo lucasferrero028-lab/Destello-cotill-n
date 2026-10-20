@@ -660,7 +660,7 @@ footer {
 }
 
 
-/* 1. ESTILOS PARA CELULAR (Por defecto) */
+
 .contenedor-productos {
   display: grid;
   grid-template-columns: 1fr; /* Una sola columna en el celular */
@@ -734,3 +734,8 @@ footer {
     padding: 4px 6px !important;
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 072c79443520b5779f965721a27d7f96092a66a4
