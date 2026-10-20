@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <!-- SOLUCIONADO: URL de Bootstrap con protocolo absoluto e íntegro -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        /* FONDO Y RESPALDO DE CENTRADO ABSOLUTO */
+        body { 
+            background-color: #0b0f19; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            
+            /* RESPALDO MANUAL: Si Bootstrap no carga, esto centra la tarjeta en el punto medio exacto */
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        /* TARJETA AGRANDADA Y CONTROLADA */
+        .box-pago { 
+            width: 100%;
+            max-width: 650px; 
+            background: #111827; 
+            border-radius: 16px; 
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 0, 127, 0.25); 
+            border: 1px solid rgba(255, 0, 127, 0.35);
+            padding: 2.5rem !important; 
+        }
+
+        /* Título Neón */
+        .titulo-neon {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 1.8rem;
+        }
+
+        /* Etiquetas del formulario */
+        .form-label-neon {
+            color: #ff007f;
+            text-shadow: 0 0 3px #ff007f;
+            font-weight: 600;
+            font-size: 0.95rem; 
+        }
+
+        /* Inputs oscuros corregidos (se expanden al 100% del ancho de su columna) */
+        .form-control-dark {
+            width: 100%;
+            background-color: #1f2937 !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: #ffffff !important;
+            padding: 14px 16px !important; 
+            font-size: 1.1rem !important; 
+            border-radius: 8px !important;
+            transition: all 0.3s ease;
+        }
+
+        .form-control-dark::placeholder {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Enfoque del input (Focus cian) */
+        .form-control-dark:focus {
+            background-color: #1f2937;
+            border-color: #00ffff !important;
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.6) !important;
+            outline: none;
+        }
+
+        /* Línea divisoria superior */
+        .border-neon-top {
+            border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }
+
+        /* Tipografía del Total */
+        .total-label {
+            font-size: 1.3rem;
+        }
+
+        .total-neon {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+            font-size: 2.2rem !important;
+        }
+
+        /* Botón de envío estilizado al 100% de ancho */
+        .btn-neon {
+            width: 100%;
+            background: transparent;
+            border: 2px solid #ff007f;
+            color: #ff007f;
+            text-shadow: 0 0 6px #ff007f;
+            box-shadow: 0 0 12px rgba(255, 0, 127, 0.3);
+            font-size: 1.2rem;
+            padding: 14px 0 !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-neon:hover {
+            background: transparent;
+            border-color: #00ffff;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            transform: scale(1.02); 
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+
+<div class="box-pago m-3">
+    <h4 class="text-center fw-bold mb-4 titulo-neon">Completá tu Pago</h4>
+    
+    <!-- Formulario Nativo con Validación -->
+    <form id="form-pago" onsubmit="procesarPago(event)">
+        <div class="row g-3">
+            <div class="col-6">
+                <label class="form-label form-label-neon mb-1">Nombre</label>
+                <input type="text" class="form-control form-control-dark" id="nombre" placeholder="Juan" required>
+            </div>
+            <div class="col-6">
+                <label class="form-label form-label-neon mb-1">Apellido</label>
+                <input type="text" class="form-control form-control-dark" id="apellido" placeholder="Pérez" required>
+            </div>
+            <div class="col-12">
+                <label class="form-label form-label-neon mb-1">Número de Tarjeta</label>
+                <input type="text" class="form-control form-control-dark" id="tarjeta" placeholder="0000 0000 0000 0000" maxlength="19" required>
+            </div>
+            <div class="col-6">
+                <label class="form-label form-label-neon mb-1">Vencimiento</label>
+                <input type="text" class="form-control form-control-dark" id="vencimiento" placeholder="MM/AA" maxlength="5" required>
+            </div>
+            <div class="col-6">
+                <label class="form-label form-label-neon mb-1">CVV</label>
+                <input type="password" class="form-control form-control-dark" id="cvv" placeholder="123" maxlength="4" required>
+            </div>
+        </div>
+
+        <!-- Fila del Monto Total Abajo -->
+        <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-neon-top">
+            <span class="text-white-50 fw-medium total-label">Monto Total:</span>
+            <strong class="total-neon" id="total-pago">\$0.00</strong>
+        </div>
+
+        <!-- Botón de Envío -->
+        <button class="btn btn-neon btn-lg mt-4 fw-bold" type="submit">
+            Finalizar Compra
+        </button>
+    </form>
+</div>
+
+<script>
+    // 1. Cargar el carrito guardado
+    let cart = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // 2. Calcular y mostrar solo el total abajo
+    function mostrarTotal() {
+        const totalElement = document.getElementById('total-pago');
+        if (!totalElement) return;
+
+        const total = cart.reduce((accum, item) => accum + (item.price * item.quantity), 0);
+        totalElement.innerText = `$${total.toFixed(2)}`;
+    }
+
+    // 3. Procesar si completó todo o rebotar si falta algo
+    function procesarPago(event) {
+        event.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value.trim();
+        const apellido = document.getElementById('apellido').value.trim();
+        const tarjeta = document.getElementById('tarjeta').value.trim();
+        const vencimiento = document.getElementById('vencimiento').value.trim();
+        const cvv = document.getElementById('cvv').value.trim();
+
+        if (!nombre || !apellido || !tarjeta || !vencimiento || !cvv) {
+            alert("Error: Por favor complete todos los datos del formulario.");
+            return;
+        }
+
+        alert("¡Gracias por tu compra!");
+        localStorage.removeItem('carrito'); // Limpia memoria
+        window.location.href = "index.html"; // Vuelve al inicio
+    }
+
+    document.addEventListener('DOMContentLoaded', mostrarTotal);
+</script>
+
+
+</body>
+</html>
+
+
+
+
+

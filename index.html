@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destello-Cotill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Bibliotecas/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+
+
+
+    <nav class="navbar fixed-top navbar-dark bg-dark bg-opacity-50  navbar-expand-lg">
+    
+  <div class="container-fluid">
+    
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="imagenes2/descarga.png" alt="Logo Destello Cotillón" width="40" height="40" class="d-inline-block align-text-top me-2">
+      <span>Destello-Cotillon</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#contacto">Contactanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#envios">Envios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#productos">Productos</a></li>
+           
+            <li><a class="dropdown-item" href="#disfraces">Disfraces</a></li>
+           
+            <li><a class="dropdown-item" href="#disfracese">Halloween-Disfraces</a></li>
+            
+            <li><a class="dropdown-item" href="#accesorios">Halloween-Accesorios</a></li>
+           
+            <li><a class="dropdown-item" href="#combos">Combos</a></li>
+          </ul>
+        </li>
+      </ul>
+
+              <!-- Carrito de Compras corregido -->
+        <div class="dropdown" id="cart-container">
+          <button class="btn btn-outline-primary position-relative" type="button" id="cart-btn" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+            <svg xmlns="http://w3.org" width="20" height="20" fill="currentColor" class="bi bi-cart3 me-1" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </button>
+          
+          <!-- Menú Desplegable -->
+          <ul class="dropdown-menu dropdown-menu-end p-3" style="width: 300px;">
+            <li><h6 class="dropdown-header px-0 text-dark pb-2 fw-bold border-bottom">Tu Carrito</h6></li>
+            
+            <!-- Contenedor de items como <li> válido -->
+            <li>
+              <div id="cart-items" class="py-2" style="max-height: 200px; overflow-y: auto;">
+                <p class="text-muted text-center small my-3">El carrito está vacío</p>
+              </div>
+            </li>
+            
+            <li><hr class="dropdown-divider"></li>
+            
+            <!-- Total -->
+            <li>
+              <div class="d-flex justify-content-between align-items-center mb-3 mt-2 px-1">
+                <span class="fw-bold">Total:</span>
+                <span id="cart-total" class="fw-bold text-success">$0.00</span>
+              </div>
+            </li>
+            
+            <!-- Botón Finalizar -->
+           <li>
+  <a class="btn btn-primary w-100 btn-sm" href="checkout.html">Finalizar compra</a>
+</li>
+</ul>
+</div>
+
+
+</nav>
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagenes2/4.png" class="d-block w-100 img-fluid" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes2/1.png" class="d-block w-100 img-fluid" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes2/2.png" class="d-block w-100 img-fluid" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes2/3.png" class="d-block w-100 img-fluid" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+   
+</div>
+
+  
+
+<section class="combo-armar" id="productos">
+    <div class="container-fluid">
+<div class="contenedor-titulo-cotillon">
+    <h2 class="titulo-neon">¡Armá tu combo ideal!</h2>
+</div>
+
+        
+
+        <div class="row g-4" id="card-productos">
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/1 (2).png" class="card-img-top imagen-primaria" alt="Rompecocos LED 1">
+             <img src="imagenes2/ChatGPT Image 3 sept 2026, 06_36_39 p.m.png" class="card-img-top img-secundaria" alt="Gente rompecocos">
+        </div>
+        
+        <div class="card-body">
+            <h5 class="card-titulo">ROMPECOCOS LED</h5>
+            <p class="card-texto">Vara de espuma con luces LED multicolor.</p>
+            <p class="envio-clase">$1500.00</p>
+            
+           
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="rompecocos-led" 
+                    data-name="Rompecocos LED" 
+                    data-price="1500.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+       <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/2 (2).png" class="card-img-top imagen-primaria" alt="COllares LED">
+            <img src="imagenes2/descarga.jpg" class="card-img-top img-secundaria" alt="Gente collares led">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">COLLARES LED</h5>
+            <p class="card-texto">Collares LED de distintos colores estilo carioca.</p>
+            <p class="envio-clase">$1000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="collar-led" 
+                    data-name="Collares LED" 
+                    data-price="1000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+ <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/3 (2).png" class="card-img-top imagen-primaria" alt="Cuernitos">
+            <img src="imagenes2/descarga (1).jpg" class="card-img-top img-secundaria" alt="Gente cuernitos led">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Cuernitos LED</h5>
+            <p class="card-texto">Vinchas de cuernitos de diablo con luces LED</p>
+            <p class="envio-clase">$500.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Cuernitos-LED" 
+                    data-name="Cuernitos LED" 
+                    data-price="500.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+             <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/4 (2).png" class="card-img-top imagen-primaria" alt="Colgantes LED ">
+            <img src="imagenes2/descarga (2).jpg" class="card-img-top img-secundaria" alt="gente colgantes led">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Colgantes LED</h5>
+            <p class="card-texto">Colgantes de silicona con luces LED de varios colores.</p>
+            <p class="envio-clase">$400.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Colgante-led" 
+                    data-name="Colgantes LED" 
+                    data-price="400.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+             <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/5.png" class="card-img-top imagen-primaria" alt="Anillos LED">
+            <img src="imagenes2/descarga (3).jpg" class="card-img-top img-secundaria" alt="Mano anillos">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Anillos LED</h5>
+            <p class="card-texto">Anillos de silicona con luces LED de colores.</p>
+            <p class="envio-clase">$200</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Anillos-led" 
+                    data-name="Anillos LED" 
+                    data-price="200.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+             <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/6.png" class="card-img-top imagen-primaria" alt="Capa Led">
+            <img src="imagenes2/images.jpg" class="card-img-top img-secundaria" alt="Chica Capa">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Capa LED</h5>
+            <p class="card-texto">Capa de tela con luces LED de colores</p>
+            <p class="envio-clase">$10000.00</p>
+            
+           
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="capa-led" 
+                    data-name="Capa LED" 
+                    data-price="10000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+<div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/7.png" class="card-img-top imagen-primaria" alt="Lentes  LED ">
+            <img src="imagenes2/descarga (4).jpg" class="card-img-top img-secundaria" alt="Chica Lentes">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Lentes LED</h5>
+            <p class="card-texto">Lentes de plástico con luces LED de colores.</p>
+            <p class="envio-clase">$3000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="lentes-led" 
+                    data-name="Lentes Led" 
+                    data-price="3000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/8.png" class="card-img-top imagen-primaria" alt="Pulsera  fluorescente">
+             <img src="imagenes2/395faba141dd603e55d7242a0064512f.jpg" class="card-img-top img-secundaria" alt="mano pulsera">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Pulseras  fluorescente</h5>
+            <p class="envio-clase">$50.00</p>
+            <p class="card-texto">Pulseras  fluorescente que brillan en la óscuridad.</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Pulsera- fluorescente" 
+                    data-name="Pulseras  fluorescente" 
+                    data-price="50.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/9.png" class="card-img-top imagen-primaria" alt="Chaleco">
+            <img src="imagenes2/97d4a9b5bd2b960d9af79c7d96bbca3d.jpg" class="card-img-top img-secundaria" alt="Gente chaleco">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Chaleco reflectivo</h5>
+            <p class="card-texto">Chaleco reflectante de tela fluorescente.</p>
+            <p class="envio-clase">$2000.00</p>
+            
+           
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="chalecos" 
+                    data-name="Chaleco reflectivo" 
+                    data-price="2000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/10.png" class="card-img-top imagen-primaria" alt="Lentes">
+             <img src="imagenes2/descarga (5).jpg" class="card-img-top img-secundaria" alt="Gente lentes">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Lentes de sol</h5>
+            <p class="card-texto">Lentes de sol plásticos de cotillón de varios colores.</p>
+            <p class="envio-clase">$100.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Lentes-sol" 
+                    data-name="Lentes de sol" 
+                    data-price="100.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/11.png" class="card-img-top imagen-primaria" alt="Gorras">
+            <img src="imagenes2/descarga (6).jpg" class="card-img-top img-secundaria" alt="Gorras gente">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Gorro visera</h5>
+            <p class="card-texto">Gorras de tela fluorescentes de varios colores.</p>
+            <p class="envio-clase">$250.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Gorro-visera" 
+                    data-name="Gorras visera" 
+                    data-price="250.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenes2/12.png" class="card-img-top imagen-primaria" alt="Corona">
+            <img src="imagenes2/descarga (7).jpg" class="card-img-top img-secundaria" alt="Corona nina">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Corona</h5>
+            <p class="card-texto">Corona plástica de cotillón con gemas de colores</p>
+            <p class="envio-clase">$300.00</p>
+            
+           
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Corona" 
+                    data-name="Corona" 
+                    data-price="300.00">
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+
+</div>     
+    </div> 
+</section> 
+
+        
+      <section id="disfraces">
+<div class="row " id="disfraces">
+    <div class="container-fluid p-0 m-0 contenedor-titulo-disfraces">
+    <h2 class="titulo-disfraces">Nuestros mejores disfraces</h2>
+</div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/1.png" class="card-img-top imagen-primaria" alt="Spiderman">
+            <img src="imagenesdisfraces/13.png" class="card-img-top img-secundaria" alt="Disfraz Spiderman">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">SPIDER-MAN</h5>
+            <p class="card-texto">Traje y máscara de tela, disponible en todos los talles</p>
+            <p class="envio-clase">$35000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-spiderman" 
+                    data-name="Disfraz de Spiderman" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/2.png" class="card-img-top imagen-primaria" alt="Rapunsel">
+            <img src="imagenesdisfraces/23.png" class="card-img-top img-secundaria" alt="Disfraz Rapunsel">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">RAPUNSEL</h5>
+            <p class="card-texto">Vestido de tela y peluca rubia, disponible en todos los talles.</p>
+            <p class="envio-clase">$45000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-rapunsel" 
+                    data-name="Disfraz de Rapunsel" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+             <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/3.png" class="card-img-top imagen-primaria" alt="Pirata-M">
+            <img src="imagenesdisfraces/17.png" class="card-img-top img-secundaria" alt="Disfraz Pirata Hombre">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">PIRATA-M</h5>
+            <p class="card-texto">Traje , sombrero y accesorios, disponible en todos los talles para el sexo masculino.</p>
+            <p class="envio-clase">$30000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Pirata" 
+                    data-name="Disfraz de Pirata-M" 
+                    data-price="30000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/4.png" class="card-img-top imagen-primaria" alt="Pirata-F">
+            <img src="imagenesdisfraces/24.png" class="card-img-top img-secundaria" alt="Disfraz Pirata F ">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">PIRATA-F</h5>
+            <p class="card-texto">Traje y accesorios disponibles en todos los talles para el sexo femenino.</p>
+            <p class="envio-clase">$30000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Pirata-F" 
+                    data-name="Disfraz de Pirata F" 
+                    data-price="30000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+             <img src="imagenesdisfraces/5.png" class="card-img-top imagen-primaria" alt="Dragón">
+            <img src="imagenesdisfraces/22.png" class="card-img-top img-secundaria" alt="Disfraz Dragón">
+           
+            
+        </div>
+        <h5 class="card-titulo">DRAGÓN</h5>
+        <div class="card-body">
+            <p class="card-texto">Traje de tela y accesorios disponible en todos los talles.</p>
+            
+            <p class="envio-clase">$40000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Dragón" 
+                    data-name="Disfraz de Dragón" 
+                    data-price="40000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/6.png" class="card-img-top imagen-primaria" alt="Hada">
+            <img src="imagenesdisfraces/18.png" class="card-img-top img-secundaria" alt="Disfraz Hada">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">HADA</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$40000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Hada" 
+                    data-name="Disfraz de Hada" 
+                    data-price="40000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/7.png" class="card-img-top imagen-primaria" alt="Harry">
+            <img src="imagenesdisfraces/20.png" class="card-img-top img-secundaria" alt="Disfraz Harry">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">HARRY POTTER</h5>
+            <p class="card-texto">Traje y accesorios disponibles en todos los talles.</p>
+            <p class="envio-clase">$45000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Harry-Potter" 
+                    data-name="Disfraz de Harry Potter" 
+                    data-price="45000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/12.png" class="card-img-top imagen-primaria" alt="Barbie">
+            <img src="imagenesdisfraces/15.png" class="card-img-top img-secundaria" alt="Disfraz Barbie">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">BARBIE</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$45000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Barbie" 
+                    data-name="Disfraz de Barbie" 
+                    data-price="45000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/9.png" class="card-img-top imagen-primaria" alt="Woddy">
+            <img src="imagenesdisfraces/21.png" class="card-img-top img-secundaria" alt="Disfraz Woddy">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">WODDY</h5>
+            <p class="card-texto">Traje de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$40000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Woddy" 
+                    data-name="Disfraz de Woddy" 
+                    data-price="40000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/8.png" class="card-img-top imagen-primaria" alt="Supergirl">
+            <img src="imagenesdisfraces/16.png" class="card-img-top img-secundaria" alt="Disfraz Supergirl">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">SUPERGIRL</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$35000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Supergirl" 
+                    data-name="Disfraz de Supergirl" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/11.png" class="card-img-top imagen-primaria" alt="Batman">
+            <img src="imagenesdisfraces/14.png" class="card-img-top img-secundaria" alt="Disfraz Batman">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">BATMAN</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$35000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Batman" 
+                    data-name="Disfraz de Batman" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="imagenesdisfraces/10.png" class="card-img-top imagen-primaria" alt="Mujer-maravilla">
+            <img src="imagenesdisfraces/19.png" class="card-img-top img-secundaria" alt="Disfraz Mujer-Maravilla">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">MUJER MARAVILLA</h5>
+            <p class="card-texto">Traje de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$35000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Mujer-Maravilla" 
+                    data-name="Disfraz de Mujer Maravilla" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+</div>
+   
+           
+      </section>
+      
+
+<section id="halloween" class="especial">
+<div class="row" id="disfracese">
+
+<div class="container-fluid p-0 m-0 contenedor-seccion-halloween">
+    <!-- Título Principal de la Sección -->
+    <h1 class="titulo-halloween-principal">Especial Halloween</h1>
+    <!-- Subtítulo Complementario -->
+    <h2 class="titulo-halloween-secundario">Nuestros disfraces</h2>
+</div>
+
+
+<div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/1.png" class="card-img-top imagen-primaria" alt="Freddy">
+            <img src="especial halloween/13.png" class="card-img-top img-secundaria" alt="Disfraz Freddy">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">FREDDY KRUEGER</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$50000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Freddy" 
+                    data-name="Disfraz de Freddy Krueger" 
+                    data-price="50000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/2.png" class="card-img-top imagen-primaria" alt="Vampiro">
+            <img src="especial halloween/14.png" class="card-img-top img-secundaria" alt="Disfraz Vampiro">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">VAMPIRO</h5>
+            <p class="card-texto">Traje de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$50000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Vampiro" 
+                    data-name="Disfraz de Vampiro" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/3.png" class="card-img-top imagen-primaria" alt="Fantasma">
+            <img src="especial halloween/18.png" class="card-img-top img-secundaria" alt="Fantasma">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">FANTASMA</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$35000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Fantasma" 
+                    data-name="Disfraz de Fantasma" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/4.png" class="card-img-top imagen-primaria" alt="IT">
+            <img src="especial halloween/15.png" class="card-img-top img-secundaria" alt="Disfraz IT">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">PAYASO IT</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$50000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Mujer-Maravilla" 
+                    data-name="Disfraz de Mujer Maravilla" 
+                    data-price="50000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/5.png" class="card-img-top imagen-primaria" alt="Monja">
+            <img src="especial halloween/16.png" class="card-img-top img-secundaria" alt="Disfraz Monja">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">TRAJE MONJA</h5>
+            <p class="card-texto">Traje de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$50000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Monja" 
+                    data-name="Disfraz de Monja" 
+                    data-price="50000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/6.png" class="card-img-top imagen-primaria" alt="frankenstein">
+            <img src="especial halloween/17.png" class="card-img-top img-secundaria" alt="Disfraz frankenstein">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Frankenstein</h5>
+            <p class="card-texto">Disfraz de tela y accesorios disponible en todos los talles.</p>
+            <p class="envio-clase">$50000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-frankenstein" 
+                    data-name="Disfraz de frankenstein" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+</div>
+
+<div id="accesorios"  class="row" >
+
+<div class="container-fluid p-0 m-0 contenedor-seccion-halloween">
+    
+    <h2 class="titulo-halloween-secundario">Accesorios de terror</h2>
+</div>
+
+<div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/7.png" class="card-img-top imagen-primaria" alt="Calabaza">
+            <img src="especial halloween/19.png" class="card-img-top img-secundaria" alt="Disfraz Calabaza">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">CALABAZA</h5>
+            <p class="card-texto">Calabaza de plástico para dulces.</p>
+            <p class="envio-clase">$15000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Calabaza" 
+                    data-name="Calabaza de plástico" 
+                    data-price="15000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/8.png" class="card-img-top imagen-primaria" alt="Sangre">
+            <img src="especial halloween/20.png" class="card-img-top img-secundaria" alt="Sangre">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Sangre falsa</h5>
+            <p class="card-texto">Líquido rojo perfecto para maquillarse, sale con agua.</p>
+            <p class="envio-clase">$10000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Sangre-falsa" 
+                    data-name="Sangre Falsa" 
+                    data-price="10000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/10.png" class="card-img-top imagen-primaria" alt="máscara">
+            <img src="especial halloween/22.png" class="card-img-top img-secundaria" alt="Gente-máscara">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">máscara</h5>
+            <p class="card-texto">Variedad de máscaras de plástico.</p>
+            <p class="envio-clase">$10000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Máscaras" 
+                    data-name="Máscaras" 
+                    data-price="10000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/9.png" class="card-img-top imagen-primaria" alt="Colmillos">
+            <img src="especial halloween/21.png" class="card-img-top img-secundaria" alt="Colmillos Gente">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Colmillos</h5>
+            <p class="card-texto">Colmillos de plástico, diferentes colores y talles.</p>
+            <p class="envio-clase">$5000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Colmillos" 
+                    data-name="Colmillos" 
+                    data-price="5000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/11.png" class="card-img-top imagen-primaria" alt="Espantapajaros">
+            <img src="especial halloween/23.png" class="card-img-top img-secundaria" alt="Decoracion Espantapajaros">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">espantapájaros</h5>
+            <p class="card-texto">Decoración espantapájaros para hogares, con sonido y luces.</p>
+            <p class="envio-clase">$35000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Decoracion-espantapájaros" 
+                    data-name="Decoracion espantapájaros" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="especial halloween/12.png" class="card-img-top imagen-primaria" alt="Machete">
+            <img src="especial halloween/24.png" class="card-img-top img-secundaria" alt="Machete Jason">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Machete</h5>
+            <p class="card-texto">Machete de plastico de jason.</p>
+            <p class="envio-clase">$10000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Machete" 
+                    data-name="Machete de plástico" 
+                    data-price="10000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+</div>
+
+
+</section>
+
+ <section id="combos">
+<div class="row">
+
+    <div class="container-fluid p-0 m-0 contenedor-seccion-combos">
+    <h2 class="titulo-combos-neon">Combos hechos <span class="destaque-para-vos">para vos</span></h2>
+</div>
+
+
+<div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="combos/1.png" class="card-img-top imagen-primaria" alt="Neon">
+            <img src="combos/8.png" class="card-img-top img-secundaria" alt="Fiesta Neon">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">flúor</h5>
+            <p class="card-texto">Collares, gorras , sombreros y más</p>
+           <p class="envio-clase">$60000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="flúor" 
+                    data-name="Combo flúor" 
+                    data-price="60000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="combos/3.png" class="card-img-top imagen-primaria" alt="cumpleaños niño">
+            <img src="combos/11.png" class="card-img-top img-secundaria" alt="Decoracion niño">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Cumpleaños niño</h5>
+            <p class="card-texto">Girnalda, carteles, y más.</p>
+            <p class="envio-clase">$60000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="CUmpleanos-niño" 
+                    data-name="Combo cumpleanos niño" 
+                    data-price="60000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="combos/5.png" class="card-img-top imagen-primaria" alt="Blanca">
+            <img src="combos/9.png" class="card-img-top img-secundaria" alt="Fiesta Blanca">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Blanca LED</h5>
+            <p class="card-texto">Sombreros, collares y más.</p>
+            <p class="envio-clase">$60000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Blanca" 
+                    data-name="Combo blanco LED" 
+                    data-price="60000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="combos/2.png" class="card-img-top imagen-primaria" alt="Cumpleaños Niña">
+            <img src="combos/12.png" class="card-img-top img-secundaria" alt="Decoración Niña">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Cumpleaños Niña</h5>
+            <p class="card-texto">Girnalda, carteles, y más.</p>
+            <p class="envio-clase">$60000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Disfraz-Mujer-Maravilla" 
+                    data-name="Disfraz de Mujer Maravilla" 
+                    data-price="60000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="combos/6.png" class="card-img-top imagen-primaria" alt="Argentina">
+            <img src="combos/10.png" class="card-img-top img-secundaria" alt="Fiesta Argentina">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Argentina</h5>
+            <p class="card-texto">Gorros, collares, pulseras y más.</p>
+            <p class="envio-clase">$60000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Argentina" 
+                    data-name="Combo Argentina" 
+                    data-price="60000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+            <div class="col-md-2 mb-4 col-cinco">
+    <div class="card h-100 tarjeta-combos-clase" data-aos="zoom-out"> 
+        <div class="contenedor-imagenes">
+            <img src="combos/4.png" class="card-img-top imagen-primaria" alt="Careoca">
+            <img src="combos/7.png" class="card-img-top img-secundaria" alt="Fiesta Careoca">
+        </div>
+        <div class="card-body">
+            <h5 class="card-titulo">Careoca</h5>
+            <p class="card-texto">Sombreros, gorros , pulseras y más.</p>
+            <p class="envio-clase">$35000.00</p>
+            
+            
+            <button class="btn btn-primary boton-tarjeta-clase btn-add-cart" 
+                    data-id="Careoca" 
+                    data-name="Combo careoca" 
+                    data-price="35000.00"> 
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </div>
+     
+            </div>
+
+</div>
+
+ </section>
+     
+<section id="seccion-contacto-unica" class="py-5 bg-contacto-dark">
+  <div  class="container">
+    <!-- Título con efecto de Luz Neón -->
+    <h2 id="contacto"   class="text-center mb-5 fw-bold titulo-contacto-neon">CONTACTANOS</h2>
+    
+    <div class="row text-center g-4">
+      
+      <!-- Tarjeta de Instagram -->
+      <div   class="col-md-4"  data-aos="zoom-out">
+        <div class="bloque-tarjeta-contacto tarjeta-contacto-instagram">
+          <div class="cuerpo-interno-contacto">
+            <i class="bi bi-instagram icon-neon-instagram fs-1 mb-3"></i>
+            <h5 class="titulo-interno-contacto">INSTAGRAM</h5>
+            <p class="texto-interno-contacto">Seguinos para ver todas las novedades y fotos de nuestros combos.</p>
+            <a href="https://instagram.com" target="_blank" class="btn-link-contacto btn-neon-instagram mt-auto w-100 py-2 text-decoration-none text-center d-block">
+              @destellocotillon 
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta de WhatsApp -->
+      <div class="col-md-4" data-aos="zoom-out" >
+        <div class="bloque-tarjeta-contacto tarjeta-contacto-whatsapp">
+          <div class="cuerpo-interno-contacto">
+            <i class="bi bi-whatsapp icon-neon-whatsapp fs-1 mb-3"></i>
+            <h5 class="titulo-interno-contacto">WHATSAPP</h5>
+            <p class="texto-interno-contacto">Escribinos directo para armar tus pedidos o consultarnos stock.</p>
+            <a href="https://wa.me" target="_blank" class="btn-link-contacto btn-neon-whatsapp mt-auto w-100 py-2 text-decoration-none text-center d-block">
+              CHATEAR AHORA
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta de Facebook -->
+      <div class="col-md-4"  data-aos="zoom-out">
+        <div class="bloque-tarjeta-contacto tarjeta-contacto-facebook">
+          <div class="cuerpo-interno-contacto">
+            <i class="bi bi-facebook icon-neon-facebook fs-1 mb-3"></i>
+            <h5 class="titulo-interno-contacto">FACEBOOK</h5>
+            <p class="texto-interno-contacto">Sumate a nuestra comunidad y enterate de las promos del mes.</p>
+            <a href="https://facebook.com" target="_blank" class="btn-link-contacto btn-neon-facebook mt-auto w-100 py-2 text-decoration-none text-center d-block">
+              DESTELLO COTILLÓN
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+      
+<section id="envios" class="py-5 bg-envios-dark">
+  <div class="container position-relative">
+    
+    <!-- Título Principal de la Sección -->
+    <div class="text-center mb-5" >
+      <h2 class="fw-bold titulo-envios-neon">RUTAS DE DESPACHO</h2>
+      <p class="text-light opacity-75">Elegí cómo recibir tu pedido para que la fiesta empiece a tiempo</p>
+    </div>
+
+    <!-- Contenedor del circuito de envíos -->
+    <div class="row g-4 position-relative contenedor-rutas"  >
+      
+      <!-- Línea de fondo decorativa (Efecto circuito) -->
+      <div class="linea-circuito d-none d-lg-block" data-aos="zoom-out"></div>
+
+      <!-- Ruta 1: Retiro Local -->
+      <div class="col-lg-4" data-aos="zoom-out">
+        <div class="ruta-card h-100 p-4 text-white">
+          <div class="num-nodo nodo-cian">01</div>
+          <div class="ruta-body mt-3">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-geo-alt fs-2 text-cian me-2"></i>
+              <h4 class="fw-bold m-0 tracking-wide">PUNTO DE RETIRO</h4>
+            </div>
+            <p class="text-light opacity-75 small">Retirá tu pedido sin cargo directamente en <strong>Suardi</strong>. Listo para pick-up en menos de 24 horas.</p>
+            <div class="badge-tiempo badge-cian">¡Inmediato!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ruta 2: Envío Local Cadetería -->
+      <div class="col-lg-4" data-aos="zoom-out">
+        <div class="ruta-card h-100 p-4 text-white">
+          <div class="num-nodo nodo-amarillo">02</div>
+          <div class="ruta-body mt-3">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-bicycle fs-2 text-amarillo me-2"></i>
+              <h4 class="fw-bold m-0 tracking-wide">ENVÍO LOCAL</h4>
+            </div>
+            <p class="text-light opacity-75 small">Repartos rápidos a domicilio en las zonas de <strong>Suardi y Morteros</strong>. Directo a tu puerta.</p>
+            <div class="badge-tiempo badge-amarillo">Mismo día o 24hs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ruta 3: Correo Nacional -->
+      <div class="col-lg-4" data-aos="zoom-out">
+        <div class="ruta-card h-100 p-4 text-white">
+          <div class="num-nodo nodo-morado">03</div>
+          <div class="ruta-body mt-3">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-box-seam fs-2 text-morado me-2"></i>
+              <h4 class="fw-bold m-0 tracking-wide">TODO EL PAÍS</h4>
+            </div>
+            <p class="text-light opacity-75 small">Envíos a cualquier rincón de Argentina vía correo nacional. Despacho protegido con código de seguimiento en vivo.</p>
+            <div class="badge-tiempo badge-morado">3 a 5 días hábiles</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Alerta de Urgencia al pie -->
+    <div class="text-center mt-5" data-aos="zoom-out">
+      <div class="alerta-neon-footer d-inline-block p-3 rounded border border-danger">
+        <span class="text-white"><i class="bi bi-exclamation-triangle text-danger me-2"></i><strong>¿Tu fiesta es este finde?</strong> Te sugerimos retirar localmente para congelar contratiempos.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    <footer>
+
+        <ul>
+            <p>Destello-Cotillón</p>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="/contactos">Contacto</a></li>
+            <li><a href="/envio">Envios</a></li>
+            <li><a href="/disfraces">Combos</a></li>
+            <li><a href="/accesorios">Disfraces</a></li>
+        </ul>
+    </footer>
+
+
+
+
+  <!-- ... Todo tu contenido HTML anterior (Navbar, tarjetas, etc.) ... -->
+
+  <!-- SCRIPT DEFINITIVO DEL CARRITO -->
+  
+<script>
+// 1. Estado del carrito (Inicializa cargando lo que ya existía en el navegador)
+let cart = JSON.parse(localStorage.getItem('carrito')) || [];
+
+// Elementos de la interfaz (Navbar) guardados en variables fijas para no buscarlos siempre
+const cartItemsContainer = document.getElementById('cart-items');
+const cartCountBadge = document.getElementById('cart-count');
+const cartTotalElement = document.getElementById('cart-total');
+const cartBtn = document.getElementById('cart-btn');
+const cartContainer = document.getElementById('cart-container');
+const dropdownMenu = cartContainer ? cartContainer.querySelector('.dropdown-menu') : null;
+
+// 2. Manejador de clics globales optimizado
+document.addEventListener('click', function(event) {
+  const target = event.target;
+
+  // ACCIÓN A: Si el usuario presiona el botón "COMPRAR" de una tarjeta
+  if (target.classList.contains('btn-add-cart')) {
+    const id = target.getAttribute('data-id');
+    const name = target.getAttribute('data-name');
+    const price = parseFloat(target.getAttribute('data-price'));
+
+    // Optimización: Busca la imagen solo si el botón existe
+    const card = target.closest('.card');
+    const imgElement = card ? card.querySelector('img') : null;
+    const image = imgElement ? imgElement.getAttribute('src') : 'imagenes2/placeholder.png';
+
+    addToCart(id, name, price, image);
+    return; // Detiene la ejecución aquí si ya encontramos el botón de compra
+  }
+
+  // ACCIÓN B: Control del menú desplegable sin búsquedas repetitivas en el DOM
+  if (cartBtn && (cartBtn === target || cartBtn.contains(target))) {
+    event.stopPropagation();
+    if (dropdownMenu) dropdownMenu.classList.toggle('show');
+  } else if (dropdownMenu && cartContainer && !cartContainer.contains(target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+
+// 3. Función para añadir o incrementar las unidades de un producto
+function addToCart(id, name, price, image) {
+  const existingProduct = cart.find(item => item.id === id);
+  
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push({ id: id, name: name, price: price, image: image, quantity: 1 });
+  }
+  
+  updateCartUI();
+}
+
+// 4. Función global para borrar un producto de la lista al pulsar la X
+window.removeFromCart = function(id) {
+  cart = cart.filter(item => item.id !== id);
+  updateCartUI();
+}
+
+// 5. Función que redibuja los elementos dentro del menú del Navbar
+function updateCartUI() {
+  if (!cartItemsContainer) return;
+  
+  cartItemsContainer.innerHTML = '';
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = '<p class="text-muted text-center small my-3">El carrito está vacío</p>';
+    if (cartCountBadge) cartCountBadge.innerText = '0';
+    if (cartTotalElement) cartTotalElement.innerText = '\$0.00';
+    localStorage.removeItem('carrito'); 
+    return;
+  }
+
+  let totalItems = 0;
+  let totalPrice = 0;
+
+  // Optimización: Usamos un fragmento de documento en memoria para inyectar todo el HTML de una sola vez
+  const fragment = document.createDocumentFragment();
+
+  cart.forEach(item => {
+    totalItems += item.quantity;
+    totalPrice += item.price * item.quantity;
+
+    const itemRow = document.createElement('div');
+    itemRow.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'py-2', 'border-bottom');
+    itemRow.innerHTML = `
+      <div style="max-width: 70%;">
+        <span class="fw-bold d-block text-truncate small">${item.name}</span>
+        <small class="text-muted">${item.quantity} x $${item.price.toFixed(2)}</small>
+      </div>
+      <button class="btn btn-sm btn-outline-danger py-0 px-2" type="button" onclick="removeFromCart('${item.id}')">✕</button>
+    `;
+    fragment.appendChild(itemRow);
+  });
+
+  cartItemsContainer.appendChild(fragment);
+
+  if (cartCountBadge) cartCountBadge.innerText = totalItems;
+  if (cartTotalElement) cartTotalElement.innerText = `$${totalPrice.toFixed(2)}`;
+
+  localStorage.setItem('carrito', JSON.stringify(cart));
+}
+
+// 6. Función ejecutada antes de cambiar de ventana
+window.checkout = function() {
+  if (cart.length === 0) {
+    alert("Tu carrito está vacío. ¡Añade algunos productos primero!");
+    return;
+  }
+  localStorage.setItem('carrito', JSON.stringify(cart));
+}
+
+// NUEVO: Ejecuta la actualización visual apenas carga la página para mostrar los productos guardados
+document.addEventListener('DOMContentLoaded', updateCartUI);
+
+// 1. Estado de la aplicación: Lista donde guardaremos los productos
+</script>
+    
+   
+
+
+
+       
+            
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="aos-master/dist/aos.js"></script>
+    <script src="Bibliotecas/bootstrap-5.3.8-dist/js/bootstrap.min.js"> </script>
+    <script >AOS.init();</script>
+ <script src="https://jsdelivr.net"></script>
+
+</body>
+</html>
